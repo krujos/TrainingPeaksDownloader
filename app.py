@@ -31,7 +31,6 @@ for workout in workouts:
             #No Power, was either the track or something I don't care about.
             continue
 
-        print " Trainer"
     else:
         miles = (float(workout['DistanceInMeters']) / 1609.3)
         print "%f miles" % miles
