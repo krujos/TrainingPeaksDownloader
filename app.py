@@ -42,7 +42,7 @@ for workout in workouts:
 print "You have %d workouts to deal with over %f miles " % (count, total_miles)
 
 for workout_id in ids:
-    r = requests.post("http://www.trainingpeaks.com/tpwebservices/service.asmx/GetExtendedWorkoutsForAccessibleAthlete",
+    r = requests.post("https://www.trainingpeaks.com/tpwebservices/service.asmx/GetExtendedWorkoutsForAccessibleAthlete",
                      data={'password': password, 'personId': personid, 'username': username, 'workoutIds': workout_id})
     pwx = open('pwx/' + str(workout_id) + '.pwx', "w")
     pwx.write(r.text)
